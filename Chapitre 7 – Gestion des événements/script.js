@@ -1,6 +1,6 @@
-let bouton = document.getElementById("btn-test");
-let champNom = document.getElementById("nom");
-let formulaire = document.getElementById("form-test");
+let bouton = document.getElementById("item1");
+let champNom = document.getElementById("item2");
+let formulaire = document.getElementById("form");
 
 bouton.addEventListener("click", function() {
   console.log("Le bouton a été cliqué !");

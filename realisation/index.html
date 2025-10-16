@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Checklist with Counter</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; }
+    .counter { font-weight: bold; margin-bottom: 10px; }
+    ul { list-style: none; padding: 0; }
+    li { margin: 5px 0; }
+  </style>
+</head>
+<body>
+
+  <h2>Checklist</h2>
+  <div class="counter">Checked items: <span id="counter">0</span></div>
+
+  <ul id="checklist">
+    <li><label><input type="checkbox"> Task 1</label></li>
+    <li><label><input type="checkbox"> Task 2</label></li>
+    <li><label><input type="checkbox"> Task 3</label></li>
+    <li><label><input type="checkbox"> Task 4</label></li>
+  </ul>
+
+  <script>
+    const checklist = document.getElementById('checklist');
+    const counter = document.getElementById('counter');
+
+    const checkboxes = checklist.querySelectorAll('input[type="checkbox"]');
+    checkboxes.forEach(box => {
+      box.addEventListener('change', () => {
+        const checkedCount = checklist.querySelectorAll('input[type="checkbox"]:checked').length;
+        counter.textContent = checkedCount;
+      });
+    });
+  </script>
+
+</body>
+</html>
