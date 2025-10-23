@@ -15,7 +15,7 @@ taskInput.addEventListener("keypress", function(event) {
 function addTask() {
   const text = taskInput.value.trim();
   if (text === "") {
-    alert("Veuillez entrer une tâche !");
+    alert("Dakhal la tache dyalk"); 
     return;
   }
 
